@@ -14,16 +14,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.8.1</junit.version>
         <selenium.version>3.141.59</selenium.version>
-        <webdrivermanager.version>4.2.0</webdrivermanager.version>
+        <webdrivermanager.version>5.6.3</webdrivermanager.version>
         <base.url></base.url>
-        <mavenSurefirePlugin.version>2.22.2</mavenSurefirePlugin.version>
+        <mavenSurefirePlugin.version>3.2.3</mavenSurefirePlugin.version>
         <mavenCompilerPlugin.version>3.8.1</mavenCompilerPlugin.version>
         <spotbugs.plugin.version>4.8.2.0</spotbugs.plugin.version>
         <spotbugs.version>4.8.3</spotbugs.version>
         <maven.checkstyle.plugin.version>3.1.0</maven.checkstyle.plugin.version>
         <browser>chrome</browser>
         <browser.version></browser.version>
-        <cucumber.version>7.15.0</cucumber.version>
+        <cucumber.version>5.5.0</cucumber.version>
         <guice.version>5.1.0</guice.version>
         <cucumberGuice.version>5.5.0</cucumberGuice.version>
     </properties>
@@ -51,7 +51,7 @@
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
+            <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
         </dependency>
         <dependency>
@@ -85,7 +85,6 @@
                     <systemProperties>
                         <base.url>${base.url}</base.url>
                         <browser>${browser}</browser>
-                        <browser.version>${browser.version}</browser.version>
                     </systemProperties>
                 </configuration>
             </plugin>

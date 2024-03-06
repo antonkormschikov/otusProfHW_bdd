@@ -7,7 +7,11 @@ import otus.pageobject.AbsPageObject;
 import otus.support.DIScooped;
 
 public abstract class AbsBasePage<T> extends AbsPageObject {
-    private  String baseUrl = System.getProperty("base_url");
+    @Inject
+    public AbsBasePage(DIScooped scenarioScoped){
+        super(scenarioScoped);
+    }
+    private  String baseUrl = System.getProperty("base.url");
     private String getPath(){
         Class clazz = this.getClass();
         if (clazz.isAnnotationPresent(Path.class)){
@@ -17,10 +21,7 @@ public abstract class AbsBasePage<T> extends AbsPageObject {
         return "";
     }
 
-    @Inject
-    public AbsBasePage(DIScooped scenarioScoped){
-        super(scenarioScoped);
-    }
+
 
     public T open(){
         this.driver.get(baseUrl+getPath());

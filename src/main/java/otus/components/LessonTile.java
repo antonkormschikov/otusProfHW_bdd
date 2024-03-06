@@ -10,18 +10,20 @@ import otus.support.DIScooped;
 import java.util.List;
 
 public class LessonTile extends AbsPageObject {
+    private DIScooped diScooped;
 
     @Inject
     public LessonTile(DIScooped diScooped){
         super(diScooped);
-        this.
+        this.diScooped=diScooped;
     }
 
     @FindBy(css = "section h2 ~ div a[href*='/lessons/']")
     private List<WebElement> lessonsTile;
 
     public LessonPage clickLessonTile(int number){
-lessonsTile.get(--number).click();
+    lessonsTile.get(--number).click();
+    return new LessonPage(diScooped);
     }
 
 }

@@ -9,4 +9,6 @@ public class MainPage extends AbsBasePage<MainPage>{
     public MainPage(DIScooped diScooped){
         super(diScooped);
     }
+
+
 }
